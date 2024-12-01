@@ -1,6 +1,6 @@
 # EthenaPump - Meme Token Creation Platform
 
-EthenaPump is a decentralized platform that enables users to create and trade meme tokens on the blockchain.
+EthenaPump is a decentralized platform that enables users to create and trade meme tokens on the blockchain using Ethena Usde.
 
 ## Features
 
