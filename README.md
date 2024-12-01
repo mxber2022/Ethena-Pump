@@ -52,7 +52,7 @@ EthenaPump is a decentralized platform that enables users to create and trade me
 ## Smart Contract Addresses
 
 - USDE Token: `0xf805ce4F96e0EdD6f0b6cd4be22B34b92373d696`
-- Token Factory: `0xb51a580A7419Cc445531448AC3979C97333856de`
+- Token Factory: `0x934A353c3292e527e45Ec62c0d4849e5c85AD910`
 
 ## How It Works
 
