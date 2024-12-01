@@ -27,7 +27,7 @@ export function Navbar() {
                 className="text-xl font-bold bg-gradient-to-r from-purple-400 via-fuchsia-500 to-pink-500 bg-clip-text text-transparent group-hover:from-purple-300 group-hover:via-fuchsia-400 group-hover:to-pink-400 transition-all"
                 whileHover={{ scale: 1.05 }}
               >
-                EthenaPump
+                Ethena.Pump
               </motion.h1>
               <p className="text-xs text-purple-500/80 group-hover:text-purple-400/80 transition-colors">
                 Pump Your Dreams
@@ -52,7 +52,7 @@ export function Navbar() {
 
           {/* Right Section */}
           <div className="flex items-center space-x-4">
-            <div className="hidden sm:flex items-center space-x-4">
+            {/* <div className="hidden sm:flex items-center space-x-4">
               {[
                 { icon: FiGithub, href: "https://github.com" },
                 { icon: FiTwitter, href: "https://twitter.com" },
@@ -73,7 +73,7 @@ export function Navbar() {
                   <Icon className="h-5 w-5" />
                 </motion.a>
               ))}
-            </div>
+            </div> */}
             <WalletConnect />
           </div>
         </div>
