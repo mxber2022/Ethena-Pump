@@ -1,12 +1,13 @@
-import React from 'react';
-import { Toaster } from 'react-hot-toast';
-import { motion } from 'framer-motion';
-import { CreateMemeToken } from './components/CreateMemeToken';
-import { TokenList } from './components/TokenList';
-import { useEthereum } from './hooks/useEthereum';
-import { FiArrowDown, FiZap, FiTrendingUp, FiShield } from 'react-icons/fi';
-import { Navbar } from './components/layout/Navbar';
-import { Footer } from './components/layout/Footer';
+import React from "react";
+import { Toaster } from "react-hot-toast";
+import { motion } from "framer-motion";
+import { CreateMemeToken } from "./components/CreateMemeToken";
+import { TokenList } from "./components/TokenList";
+import { useEthereum } from "./hooks/useEthereum";
+import { FiArrowDown, FiZap, FiTrendingUp, FiShield } from "react-icons/fi";
+import { Navbar } from "./components/layout/Navbar";
+import { Footer } from "./components/layout/Footer";
+import { HowItWorks } from "./components/HowItWorks";
 
 function App() {
   const { address } = useEthereum();
@@ -15,35 +16,35 @@ function App() {
     {
       icon: <FiZap className="h-6 w-6 text-green-400" />,
       title: "Launch Instantly",
-      description: "Create your meme token in minutes with just a few clicks"
+      description: "Create your meme token in minutes with just a few clicks",
     },
     {
       icon: <FiTrendingUp className="h-6 w-6 text-emerald-400" />,
       title: "Pump It Up",
-      description: "Watch your token soar with our advanced trading features"
+      description: "Watch your token soar with our advanced trading features",
     },
     {
       icon: <FiShield className="h-6 w-6 text-teal-400" />,
       title: "Secure Platform",
-      description: "Built on blockchain with audited smart contracts"
-    }
+      description: "Built on blockchain with audited smart contracts",
+    },
   ];
 
   return (
     <div className="min-h-screen bg-[#0A0A0A] text-white">
-      <Toaster 
+      <Toaster
         position="top-right"
         toastOptions={{
           style: {
-            background: '#1A1A1A',
-            color: '#fff',
-            border: '1px solid rgba(16, 185, 129, 0.1)'
-          }
+            background: "#1A1A1A",
+            color: "#fff",
+            border: "1px solid rgba(16, 185, 129, 0.1)",
+          },
         }}
       />
-      
+
       <Navbar />
-      
+
       <div className="relative">
         {/* Hero Section */}
         <div className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 pt-16">
@@ -68,7 +69,7 @@ function App() {
               </span>
             </motion.div>
 
-            <motion.h1 
+            <motion.h1
               className="text-6xl md:text-7xl font-bold mb-6 gradient-text"
               initial={{ scale: 0.9 }}
               animate={{ scale: 1 }}
@@ -79,7 +80,7 @@ function App() {
               Your Token Dreams
             </motion.h1>
 
-            <motion.p 
+            <motion.p
               className="text-xl md:text-2xl text-gray-400 mb-12"
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -107,7 +108,9 @@ function App() {
                   <div className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-xl p-3 inline-block mb-4">
                     {feature.icon}
                   </div>
-                  <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
+                  <h3 className="text-lg font-semibold mb-2">
+                    {feature.title}
+                  </h3>
                   <p className="text-gray-400 text-sm">{feature.description}</p>
                 </motion.div>
               ))}
@@ -125,6 +128,8 @@ function App() {
             )}
           </motion.div>
         </div>
+
+        <HowItWorks />
 
         {/* Content Section */}
         {address && (
